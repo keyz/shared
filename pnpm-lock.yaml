@@ -35,6 +35,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.14
         version: 18.2.14
+      eslint:
+        specifier: ^8.52.0
+        version: 8.52.0
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@18.18.7)
@@ -71,12 +74,13 @@ importers:
       '@typescript-eslint/utils':
         specifier: ^6.9.0
         version: 6.9.0(eslint@8.52.0)(typescript@5.2.2)
-      eslint:
-        specifier: ^8.52.0
-        version: 8.52.0
       eslint-plugin-import:
         specifier: ^2.29.0
         version: 2.29.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)
+    devDependencies:
+      eslint:
+        specifier: ^8.52.0
+        version: 8.52.0
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
@@ -86,9 +90,6 @@ importers:
       '@typescript-eslint/utils':
         specifier: ^6.9.0
         version: 6.9.0(eslint@8.52.0)(typescript@5.2.2)
-      eslint:
-        specifier: ^8.52.0
-        version: 8.52.0
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^2.1.2
@@ -96,6 +97,9 @@ importers:
       '@typescript-eslint/rule-tester':
         specifier: ^6.9.0
         version: 6.9.0(@eslint/eslintrc@2.1.2)(eslint@8.52.0)(typescript@5.2.2)
+      eslint:
+        specifier: ^8.52.0
+        version: 8.52.0
 
   packages/jest-config:
     dependencies:
