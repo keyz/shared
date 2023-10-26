@@ -1,0 +1,34 @@
+{
+  "name": "@keyanz/eslint-config",
+  "version": "0.2.0",
+  "license": "MIT",
+  "exports": {
+    "./*": "./dist/public/*.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/public/*"
+      ]
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist ./.cache",
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --cache --cache-location './.cache/eslint/' .",
+    "test": "jest --passWithNoTests",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@keyanz/eslint-plugin": "workspace:*",
+    "@rushstack/eslint-patch": "^1.5.1",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@typescript-eslint/utils": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-import": "^2.29.0",
+    "typescript": "^5.2.2"
+  }
+}

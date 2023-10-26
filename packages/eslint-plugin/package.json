@@ -1,0 +1,23 @@
+{
+  "name": "@keyanz/eslint-plugin",
+  "version": "0.2.0",
+  "license": "MIT",
+  "main": "./dist/public/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist ./.cache",
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --cache --cache-location './.cache/eslint/' .",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^6.9.0",
+    "eslint": "^8.52.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^2.1.2",
+    "@typescript-eslint/rule-tester": "^6.9.0"
+  }
+}

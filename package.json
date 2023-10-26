@@ -1,0 +1,40 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "build:watch": "tsc --build --watch tsconfig.build.json",
+    "clean-all": "pnpm run -r --no-bail clean",
+    "consistent-versions": "syncpack list-mismatches",
+    "lint-all": "pnpm run -r --no-bail lint",
+    "lint-all:ci": "pnpm run -r --sequential lint --format compact",
+    "prettier:check": "prettier --check \"**/*.{css,html,js,json,md,svg,ts,tsx,yaml,yml}\" --ignore-path ./.prettierignore",
+    "prettier:write": "prettier --write \"**/*.{css,html,js,json,md,svg,ts,tsx,yaml,yml}\" --ignore-path ./.prettierignore",
+    "reset-all": "pnpm run clean-all && pnpm -r exec rimraf node_modules && pnpm -w exec rimraf node_modules && pnpm install -r && pnpm run build",
+    "test-all": "pnpm run -r --no-bail test",
+    "typecheck-all": "tsc --build tsconfig.typecheck.json"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@jest/globals": "^29.7.0",
+    "@jest/types": "^29.6.3",
+    "@keyanz/eslint-config": "workspace:*",
+    "@keyanz/jest-config": "workspace:*",
+    "@keyanz/tsconfig": "workspace:*",
+    "@types/node": "^18.18.7",
+    "@types/react": "^18.2.32",
+    "@types/react-dom": "^18.2.14",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "syncpack": "^11.2.1",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": "^18.0.0",
+    "pnpm": "^8.0.0"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@8.9.2"
+}

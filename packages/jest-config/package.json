@@ -1,0 +1,30 @@
+{
+  "name": "@keyanz/jest-config",
+  "version": "0.2.0",
+  "license": "MIT",
+  "exports": {
+    "./*": "./dist/public/*.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/public/*"
+      ]
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist ./.cache",
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --cache --cache-location './.cache/eslint/' .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "babel-jest": "^29.7.0"
+  }
+}

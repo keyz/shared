@@ -1,0 +1,8 @@
+{
+  "references": [
+    { "path": "./packages/eslint-config" },
+    { "path": "./packages/eslint-plugin" },
+    { "path": "./packages/jest-config" }
+  ],
+  "files": []
+}
