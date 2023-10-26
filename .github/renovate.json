@@ -15,6 +15,11 @@
       "description": "Skip granular engine updates",
       "matchDepTypes": ["engines"],
       "rangeStrategy": "in-range-only"
+    },
+    {
+      "description": "Widen peer dependencies",
+      "matchDepTypes": ["peerDependencies"],
+      "rangeStrategy": "widen"
     }
   ],
   "postUpdateOptions": ["pnpmDedupe"],
