@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommitsDisabled",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "branchTopic": "refresh-lockfile",
+    "commitMessageAction": "Refresh lockfile"
+  },
+  "packageRules": [
+    {
+      "description": "Skip granular engine updates",
+      "matchDepTypes": ["engines"],
+      "rangeStrategy": "in-range-only"
+    }
+  ],
+  "postUpdateOptions": ["pnpmDedupe"],
+  "rangeStrategy": "bump",
+  "timezone": "America/Los_Angeles"
+}
