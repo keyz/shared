@@ -1,0 +1,27 @@
+{
+  "name": "@keyanz/stdlib",
+  "version": "0.2.0",
+  "license": "MIT",
+  "exports": {
+    "./*": "./dist/public/*.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/public/*"
+      ]
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist ./.cache",
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --cache --cache-location './.cache/eslint/' .",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0"
+  }
+}
