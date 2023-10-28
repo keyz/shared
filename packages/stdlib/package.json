@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "clean": "rimraf ./dist ./.cache",
-    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --cache --cache-location './.cache/eslint/' .",
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
