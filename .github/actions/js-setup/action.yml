@@ -1,0 +1,44 @@
+name: "Setup JS"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Install Node.js
+      uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
+      with:
+        node-version-file: "./.nvmrc"
+
+    - name: Activate pnpm
+      run: corepack enable
+      shell: bash
+
+    - name: Get pnpm store directory (for caching)
+      id: pnpm-cache-dir
+      run: |
+        echo "PNPM_STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      shell: bash
+
+    - name: Cache pnpm store
+      uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
+      with:
+        path: ${{ steps.pnpm-cache-dir.outputs.PNPM_STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Check lockfile integrity
+      run: pnpm install -r --lockfile-only --strict-peer-dependencies
+      shell: bash
+
+    - name: Install dependencies
+      run: pnpm install -r --frozen-lockfile --strict-peer-dependencies
+      shell: bash
+
+    - name: Ensure dependency versions are consistent
+      run: pnpm run consistent-versions
+      shell: bash
+
+    - name: Compile
+      run: pnpm run build
+      shell: bash

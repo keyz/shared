@@ -1,0 +1,38 @@
+name: js
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - name: Setup JS
+        uses: ./.github/actions/js-setup
+
+      - name: Test
+        run: pnpm run test-all
+
+      - name: Typecheck
+        run: pnpm run typecheck-all
+
+      - name: Lint
+        run: pnpm run lint-all:ci
+
+      - name: Prettier
+        run: pnpm run prettier:check
+
+      - name: Check Git
+        uses: ./.github/actions/git-check
