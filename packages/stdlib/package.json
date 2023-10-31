@@ -23,5 +23,10 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyz/shared.git",
+    "directory": "packages/stdlib"
   }
 }

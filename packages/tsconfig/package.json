@@ -9,5 +9,10 @@
   "dependencies": {
     "@tsconfig/node18": "^18.2.2",
     "@tsconfig/strictest": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyz/shared.git",
+    "directory": "packages/tsconfig"
   }
 }

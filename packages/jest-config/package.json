@@ -26,5 +26,10 @@
     "@babel/preset-react": "^7.22.15",
     "@babel/preset-typescript": "^7.23.2",
     "babel-jest": "^29.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyz/shared.git",
+    "directory": "packages/jest-config"
   }
 }
