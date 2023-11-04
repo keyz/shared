@@ -18,7 +18,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^2.1.2",
     "@typescript-eslint/rule-tester": "^6.9.1",
-    "eslint": "^8.52.0"
+    "eslint": "^8.53.0"
   },
   "peerDependencies": {
     "eslint": "^8.0.0"
