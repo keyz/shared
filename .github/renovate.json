@@ -20,6 +20,11 @@
       "description": "Widen peer dependencies",
       "matchDepTypes": ["peerDependencies"],
       "rangeStrategy": "widen"
+    },
+    {
+      "description": "monorepo:@keyanz",
+      "groupName": "@keyanz monorepo",
+      "matchPackagePrefixes": ["@keyanz/"]
     }
   ],
   "postUpdateOptions": ["pnpmDedupe"],
