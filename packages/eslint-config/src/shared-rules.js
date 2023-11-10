@@ -33,6 +33,7 @@ const sharedRules = {
       "newlines-between": "never",
     },
   ],
+  "no-constant-binary-expression": "error",
 
   // See https://typescript-eslint.io/rules/?supported-rules=recommended
   "@typescript-eslint/adjacent-overload-signatures": "error",
