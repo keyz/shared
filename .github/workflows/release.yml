@@ -1,19 +1,19 @@
-name: build
+name: release
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
   workflow_dispatch:
 
 env:
   NEXT_TELEMETRY_DISABLED: 1
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     timeout-minutes: 5
+
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout
@@ -22,17 +22,13 @@ jobs:
       - name: Setup JS
         uses: ./.github/actions/js-setup
 
-      - name: Test
-        run: pnpm run test-all
+      - name: Clean build
+        run: pnpm run reset-all
 
-      - name: Typecheck
-        run: pnpm run typecheck-all
-
-      - name: Lint
-        run: pnpm run lint-all:ci
-
-      - name: Prettier
-        run: pnpm run prettier:check
+      - name: Release
+        run: pnpm publish -r
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Check Git
         uses: ./.github/actions/git-check
