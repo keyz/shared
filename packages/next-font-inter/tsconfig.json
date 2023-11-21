@@ -1,6 +1,8 @@
 {
   "extends": "@keyanz/tsconfig/base",
   "compilerOptions": {
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "rootDir": "./",
     "tsBuildInfoFile": "./.cache/typescript/.typecheck.tsbuildinfo"

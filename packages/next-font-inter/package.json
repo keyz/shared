@@ -1,6 +1,7 @@
 {
   "name": "next-font-inter",
-  "version": "0.3.0",
+  "description": "Inter font for Next.js",
+  "version": "0.4.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -14,14 +15,12 @@
   "scripts": {
     "clean": "rimraf ./dist ./.cache",
     "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
-    "test": "jest --passWithNoTests",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "next": ">=13.2.0"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -30,5 +29,12 @@
     "type": "git",
     "url": "https://github.com/keyz/shared.git",
     "directory": "packages/next-font-inter"
-  }
+  },
+  "keywords": [
+    "font",
+    "Inter",
+    "Next.js",
+    "next",
+    "next/font"
+  ]
 }
