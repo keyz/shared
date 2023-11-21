@@ -113,6 +113,12 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.23.3)
 
+  packages/next-font-inter:
+    devDependencies:
+      '@jest/globals':
+        specifier: ^29.7.0
+        version: 29.7.0
+
   packages/stdlib:
     devDependencies:
       '@jest/globals':
