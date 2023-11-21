@@ -1,16 +1,11 @@
 {
   "name": "next-font-inter",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "license": "MIT",
+  "type": "module",
   "exports": {
-    "./*": "./dist/public/*.js"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/public/*"
-      ]
-    }
+    "types": "./dist/public/index.d.ts",
+    "default": "./dist/public/index.js"
   },
   "files": [
     "assets/",
