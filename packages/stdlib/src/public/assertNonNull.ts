@@ -2,7 +2,7 @@ import { recaptureErrorStack } from "./recaptureErrorStack";
 
 export function assertNonNull<T>(
   input: T | null | undefined,
-  name: string,
+  name: string = "<unknown>",
 ): asserts input is T {
   if (input == null) {
     throw recaptureErrorStack(

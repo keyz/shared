@@ -3,7 +3,7 @@ import { recaptureErrorStack } from "./recaptureErrorStack";
 export function refineTypePredicate<T>(
   input: unknown,
   predicate: (input: unknown) => input is T,
-  name: string,
+  name: string = "<unknown>",
 ): T {
   if (!predicate(input)) {
     throw recaptureErrorStack(

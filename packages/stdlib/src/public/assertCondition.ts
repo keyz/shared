@@ -2,7 +2,7 @@ import { recaptureErrorStack } from "./recaptureErrorStack";
 
 export function assertCondition(
   condition: unknown,
-  name: string,
+  name: string = "<unknown>",
 ): asserts condition {
   if (!condition) {
     throw recaptureErrorStack(
