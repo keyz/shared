@@ -1,7 +1,7 @@
 {
   "name": "next-font-inter",
   "description": "Inter font for Next.js",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
