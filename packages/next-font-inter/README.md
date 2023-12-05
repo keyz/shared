@@ -10,10 +10,36 @@ Inter from Google Fonts is wildly outdated and has no italics. This package trac
 npm install next-font-inter
 ```
 
+### "Vanilla" Usage
+
 ```tsx
 // app/layout.tsx
 
 import { InterVariable, InterDisplay } from "next-font-inter";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${InterVariable.className} ${InterDisplay.className}`}
+    >
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+### With Tailwind
+
+```tsx
+// app/layout.tsx
+
+import { InterVariable, InterDisplay } from "next-font-inter";
+import "./globals.css"; // See https://nextjs.org/docs/app/building-your-application/styling/tailwind-css#importing-styles
 
 export default function RootLayout({
   children,
@@ -41,10 +67,10 @@ const config = {
     extend: {
       fontFamily: {
         sans: [
-          "var(--font-inter-variable)", // `InterVariable`
+          "var(--font-inter-variable)", // CSS variable name for `InterVariable`
         ],
         display: [
-          "var(--font-inter-display)", // `InterDisplay`
+          "var(--font-inter-display)", // CSS variable name for `InterDisplay`
         ],
       },
     },
