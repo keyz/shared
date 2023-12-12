@@ -1,4 +1,4 @@
-import { test } from "@jest/globals";
+import { test } from "vitest";
 import { unionToExhaustiveListCheckerFactory } from "../public/unionToExhaustiveListCheckerFactory";
 
 test("types: unionToExhaustiveListCheckerFactory", () => {

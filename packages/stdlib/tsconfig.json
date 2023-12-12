@@ -5,7 +5,7 @@
     "rootDir": "./",
     "tsBuildInfoFile": "./.cache/typescript/.typecheck.tsbuildinfo"
   },
-  "include": ["**/*.ts", "**/*.js", "**/.*.js"],
+  "include": ["**/*.ts", "**/*.js", "**/*.mjs", "**/.*.js"],
   "exclude": ["node_modules/", "dist/"],
   "references": []
 }

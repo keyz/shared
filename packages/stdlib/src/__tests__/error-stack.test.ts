@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import { test, expect } from "vitest";
 import { assertNever } from "../public/assertNever";
 
 test("`assertNever` itself doesn't pollute the error stack", () => {
