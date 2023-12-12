@@ -1,4 +1,4 @@
-import { test } from "@jest/globals";
+import { test } from "vitest";
 import { assertCondition } from "../public/assertCondition";
 
 test("types: assertCondition", () => {

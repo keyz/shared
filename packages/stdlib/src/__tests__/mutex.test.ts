@@ -1,7 +1,7 @@
-import { test, expect, describe, jest } from "@jest/globals";
+import { test, expect, describe, vitest } from "vitest";
 import { Mutex } from "../public/mutex";
 
-jest.useFakeTimers();
+vitest.useFakeTimers();
 
 test("can be acquired asynchronously and released", async () => {
   const lock = new Mutex();
@@ -30,9 +30,9 @@ test("throws if a timeout occurs before it is acquired", async () => {
   await lock.acquireAsync();
 
   const acquirePromise = lock.acquireAsync({ timeoutMs: 1000 });
-  jest.advanceTimersByTime(1000);
+  vitest.advanceTimersByTime(1000);
   await expect(acquirePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-    `"Timed out (1000ms) waiting for lock"`,
+    `[Error: Timed out (1000ms) waiting for lock]`,
   );
 
   lock.release();
@@ -71,7 +71,9 @@ test("throws if released while unacquired", () => {
   const lock = new Mutex();
   expect(() => {
     lock.release();
-  }).toThrowErrorMatchingInlineSnapshot(`"Cannot release an unacquired lock"`);
+  }).toThrowErrorMatchingInlineSnapshot(
+    `[Error: Cannot release an unacquired lock]`,
+  );
 });
 
 test("blocks async code that has not acquired the lock", async () => {

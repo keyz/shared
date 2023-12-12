@@ -18,11 +18,11 @@
   "scripts": {
     "clean": "rimraf ./dist ./.cache",
     "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
-    "test": "jest",
+    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0"
+    "vitest": "^1.0.4"
   },
   "repository": {
     "type": "git",

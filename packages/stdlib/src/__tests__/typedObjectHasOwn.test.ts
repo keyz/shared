@@ -1,4 +1,4 @@
-import { test } from "@jest/globals";
+import { test } from "vitest";
 import { typedObjectHasOwn } from "../public/typedObjectHasOwn";
 
 test("types: typedObjectHasOwn", () => {
