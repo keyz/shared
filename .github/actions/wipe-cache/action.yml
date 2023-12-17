@@ -1,0 +1,16 @@
+name: "Wipe cache"
+
+inputs:
+  github_token:
+    required: true
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Wipe cache
+      run: |
+        gh cache delete --all
+      env:
+        GH_TOKEN: ${{ inputs.github_token }}
+      shell: bash
