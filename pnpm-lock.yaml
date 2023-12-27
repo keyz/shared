@@ -50,12 +50,11 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
-
-  apps/klm:
-    devDependencies:
       vitest:
         specifier: ^1.1.0
         version: 1.1.0(@types/node@18.19.3)
+
+  apps/klm: {}
 
   packages/eslint-config:
     dependencies:
@@ -131,11 +130,7 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
 
-  packages/stdlib:
-    devDependencies:
-      vitest:
-        specifier: ^1.1.0
-        version: 1.1.0(@types/node@18.19.3)
+  packages/stdlib: {}
 
   packages/tsconfig:
     dependencies:

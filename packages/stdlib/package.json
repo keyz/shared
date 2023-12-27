@@ -21,9 +21,6 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
-  "devDependencies": {
-    "vitest": "^1.1.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/keyz/shared.git",
