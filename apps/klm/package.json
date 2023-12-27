@@ -12,6 +12,7 @@
       ]
     }
   },
+  "bin": "./dist/bin.js",
   "files": [
     "dist/"
   ],
@@ -20,6 +21,10 @@
     "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "^4.24.1",
+    "@keyanz/stdlib": "workspace:*"
   },
   "repository": {
     "type": "git",
