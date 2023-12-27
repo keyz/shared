@@ -16,7 +16,7 @@
     "@typescript-eslint/utils": "^6.16.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^2.1.4",
+    "@eslint/eslintrc": "^3.0.0",
     "@typescript-eslint/rule-tester": "^6.16.0",
     "eslint": "^8.56.0"
   },
