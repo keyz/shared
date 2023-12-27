@@ -51,6 +51,12 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  apps/klm:
+    devDependencies:
+      vitest:
+        specifier: ^1.1.0
+        version: 1.1.0(@types/node@18.19.3)
+
   packages/eslint-config:
     dependencies:
       '@keyanz/eslint-plugin':

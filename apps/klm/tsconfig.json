@@ -1,0 +1,11 @@
+{
+  "extends": "@keyanz/tsconfig/base",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "./",
+    "tsBuildInfoFile": "./.cache/typescript/.typecheck.tsbuildinfo"
+  },
+  "include": ["**/*.ts", "**/*.js", "**/*.mjs", "**/.*.js"],
+  "exclude": ["node_modules/", "dist/"],
+  "references": []
+}

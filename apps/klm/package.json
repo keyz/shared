@@ -1,0 +1,32 @@
+{
+  "name": "klm",
+  "version": "0.1.0",
+  "license": "MIT",
+  "exports": {
+    "./*": "./dist/public/*.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/public/*"
+      ]
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist ./.cache",
+    "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "vitest": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyz/shared.git",
+    "directory": "apps/klm"
+  }
+}

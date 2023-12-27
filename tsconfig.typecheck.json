@@ -1,5 +1,6 @@
 {
   "references": [
+    { "path": "./apps/klm/tsconfig.json" },
     { "path": "./packages/eslint-config/tsconfig.json" },
     { "path": "./packages/eslint-plugin/tsconfig.json" },
     { "path": "./packages/jest-config/tsconfig.json" },
