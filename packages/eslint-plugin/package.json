@@ -13,11 +13,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^6.17.0"
+    "@typescript-eslint/utils": "^6.18.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",
-    "@typescript-eslint/rule-tester": "^6.17.0",
+    "@typescript-eslint/rule-tester": "^6.18.0",
     "eslint": "^8.56.0"
   },
   "peerDependencies": {
