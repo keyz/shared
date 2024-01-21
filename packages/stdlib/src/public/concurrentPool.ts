@@ -1,4 +1,4 @@
-import { assertCondition } from "./assertCondition";
+import { assertCondition } from "./assertCondition.js";
 
 export type TThunk<T> = () => Promise<T>;
 export type TYield<T> =

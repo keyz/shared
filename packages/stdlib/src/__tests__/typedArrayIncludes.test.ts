@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { typedArrayIncludes } from "../public/typedArrayIncludes";
+import { typedArrayIncludes } from "../public/typedArrayIncludes.js";
 
 test("types: typedArrayIncludes", () => {
   const staticList = ["aaa", "bbb"] as const;

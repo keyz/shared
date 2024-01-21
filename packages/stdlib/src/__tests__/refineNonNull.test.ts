@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { refineNonNull } from "../public/refineNonNull";
+import { refineNonNull } from "../public/refineNonNull.js";
 
 test("types: refineNonNull", () => {
   function onlyString(x: string) {

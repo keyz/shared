@@ -1,4 +1,4 @@
-import type { TAnyLiteralObject } from "./types";
+import type { TAnyLiteralObject } from "./types.js";
 
 // https://stackoverflow.com/a/60142095
 export function typedObjectEntries<const T extends TAnyLiteralObject>(

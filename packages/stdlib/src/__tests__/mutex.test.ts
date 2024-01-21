@@ -1,5 +1,5 @@
 import { test, expect, describe, vitest } from "vitest";
-import { Mutex } from "../public/mutex";
+import { Mutex } from "../public/mutex.js";
 
 vitest.useFakeTimers();
 

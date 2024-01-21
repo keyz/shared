@@ -1,5 +1,5 @@
-import { recaptureErrorStack } from "./recaptureErrorStack";
-import type { TEither } from "./types";
+import { recaptureErrorStack } from "./recaptureErrorStack.js";
+import type { TEither } from "./types.js";
 
 export type { TEither };
 

@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { reindent } from "../public/reindent";
+import { reindent } from "../public/reindent.js";
 
 test("reindent", () => {
   expect(reindent``).toEqual("");
