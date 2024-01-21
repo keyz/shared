@@ -2,22 +2,13 @@
   "name": "@keyanz/stdlib",
   "version": "0.11.0",
   "license": "MIT",
-  "exports": {
-    "./*": "./dist/public/*.js"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/public/*"
-      ]
-    }
-  },
   "files": [
     "dist/"
   ],
   "scripts": {
     "clean": "rimraf ./dist ./.cache",
     "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
+    "prepare": "tshy",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
@@ -28,5 +19,27 @@
     "type": "git",
     "url": "https://github.com/keyz/shared.git",
     "directory": "packages/stdlib"
-  }
+  },
+  "tshy": {
+    "project": "./tsconfig.build.json",
+    "exclude": [
+      "**/__tests__/**"
+    ],
+    "exports": {
+      "./*": "./src/public/*.ts"
+    }
+  },
+  "exports": {
+    "./*": {
+      "import": {
+        "types": "./dist/esm/public/*.d.ts",
+        "default": "./dist/esm/public/*.js"
+      },
+      "require": {
+        "types": "./dist/commonjs/public/*.d.ts",
+        "default": "./dist/commonjs/public/*.js"
+      }
+    }
+  },
+  "type": "module"
 }
