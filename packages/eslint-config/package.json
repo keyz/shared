@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@keyanz/eslint-plugin": "workspace:*",
-    "@rushstack/eslint-patch": "^1.10.2",
+    "@rushstack/eslint-patch": "^1.10.3",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
     "@typescript-eslint/parser": "^7.9.0",
     "@typescript-eslint/utils": "^7.9.0",
