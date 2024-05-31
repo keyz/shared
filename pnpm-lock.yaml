@@ -86,11 +86,11 @@ importers:
         version: 7.11.0(eslint@8.57.0)(typescript@5.4.5)
     devDependencies:
       '@eslint/eslintrc':
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^3.1.0
+        version: 3.1.0
       '@typescript-eslint/rule-tester':
         specifier: ^7.11.0
-        version: 7.11.0(@eslint/eslintrc@3.0.2)(eslint@8.57.0)(typescript@5.4.5)
+        version: 7.11.0(@eslint/eslintrc@3.1.0)(eslint@8.57.0)(typescript@5.4.5)
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -2057,8 +2057,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@eslint/eslintrc@3.0.2:
-    resolution: {integrity: sha512-wV19ZEGEMAC1eHgrS7UQPqsdEiCIbTKTasEfcXAigzoXICcqZSjBZEHlZwNVvKg6UBCjSlos84XiLqsRJnIcIg==}
+  /@eslint/eslintrc@3.1.0:
+    resolution: {integrity: sha512-4Bfj15dVJdoy3RfZmmo86RK1Fwzn6SstsvK9JS+BaVKqC6QQQQyXekNaC+g+LKNgkQ+2VhGAzm6hO40AhMR3zQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     dependencies:
       ajv: 6.12.6
@@ -2766,14 +2766,14 @@ packages:
       - supports-color
     dev: false
 
-  /@typescript-eslint/rule-tester@7.11.0(@eslint/eslintrc@3.0.2)(eslint@8.57.0)(typescript@5.4.5):
+  /@typescript-eslint/rule-tester@7.11.0(@eslint/eslintrc@3.1.0)(eslint@8.57.0)(typescript@5.4.5):
     resolution: {integrity: sha512-EKir9b2n1JKnpm9DFHi0r3zbp7zoujMHDVMa/9xS9jeH80Van18r/vmy8WQbEQGiRBpm3PmaRFtSUbOG2FE6dg==}
     engines: {node: ^18.18.0 || >=20.0.0}
     peerDependencies:
       '@eslint/eslintrc': '>=2'
       eslint: ^8.56.0
     dependencies:
-      '@eslint/eslintrc': 3.0.2
+      '@eslint/eslintrc': 3.1.0
       '@typescript-eslint/typescript-estree': 7.11.0(typescript@5.4.5)
       '@typescript-eslint/utils': 7.11.0(eslint@8.57.0)(typescript@5.4.5)
       ajv: 6.12.6
