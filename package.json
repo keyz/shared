@@ -27,7 +27,7 @@
     "prettier": "^3.3.1",
     "rimraf": "^5.0.7",
     "syncpack": "^12.3.2",
-    "tsx": "^4.11.2",
+    "tsx": "^4.14.1",
     "typescript": "^5.4.5"
   },
   "engines": {
