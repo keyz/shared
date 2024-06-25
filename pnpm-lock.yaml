@@ -42,8 +42,8 @@ importers:
         specifier: ^5.0.7
         version: 5.0.7
       syncpack:
-        specifier: ^12.3.2
-        version: 12.3.2(typescript@5.5.2)
+        specifier: ^12.3.3
+        version: 12.3.3(typescript@5.5.2)
       tsx:
         specifier: ^4.15.7
         version: 4.15.7
@@ -3241,8 +3241,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  syncpack@12.3.2:
-    resolution: {integrity: sha512-ePvaDfasxF8mwaPItN6urmABaH6FPT3/vJU+2DHt24j8EIKjgz6NCxXDx2bTXJXZ4QcEFwvoiu3EqaJsVrHvUg==}
+  syncpack@12.3.3:
+    resolution: {integrity: sha512-r154Rk8YtJA0My8Nu5v4e58n3y85atG4WlxekTQ/DT4toqiMtprqn5LrHuNVAhbpsOfUHPv6EFMj9k+FdDvgDA==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -7301,7 +7301,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  syncpack@12.3.2(typescript@5.5.2):
+  syncpack@12.3.3(typescript@5.5.2):
     dependencies:
       '@effect/schema': 0.66.5(effect@3.0.3)(fast-check@3.17.2)
       chalk: 5.3.0
