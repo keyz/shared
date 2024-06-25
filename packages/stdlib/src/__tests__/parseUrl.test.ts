@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { parseUrl } from "../public/parseUrl";
+import { parseUrl } from "../public/parseUrl.js";
 
 test("parseUrl", () => {
   expect(parseUrl("https://example.com")).toEqual(

@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { assertNonNull } from "../public/assertNonNull";
+import { assertNonNull } from "../public/assertNonNull.js";
 
 test("types: assertNonNull", () => {
   function onlyString(x: string) {

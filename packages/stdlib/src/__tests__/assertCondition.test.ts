@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { assertCondition } from "../public/assertCondition";
+import { assertCondition } from "../public/assertCondition.js";
 
 test("types: assertCondition", () => {
   function onlyString(x: string) {

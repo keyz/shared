@@ -3,8 +3,8 @@ import {
   concurrentPool,
   type TInstruction,
   type TYield,
-} from "../public/concurrentPool";
-import { sleep } from "../public/sleep";
+} from "../public/concurrentPool.js";
+import { sleep } from "../public/sleep.js";
 
 describe("concurrentPool", () => {
   test("simple", async () => {

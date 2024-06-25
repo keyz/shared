@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { typedObjectHasOwn } from "../public/typedObjectHasOwn";
+import { typedObjectHasOwn } from "../public/typedObjectHasOwn.js";
 
 test("types: typedObjectHasOwn", () => {
   const staticMap = { aaa: 123, bbb: 123 } as const;

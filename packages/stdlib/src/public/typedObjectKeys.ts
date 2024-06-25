@@ -1,4 +1,4 @@
-import type { TAnyLiteralObject } from "./types";
+import type { TAnyLiteralObject } from "./types.js";
 
 export function typedObjectKeys<const T extends TAnyLiteralObject>(
   input: T,

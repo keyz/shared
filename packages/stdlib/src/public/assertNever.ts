@@ -1,4 +1,4 @@
-import { recaptureErrorStack } from "./recaptureErrorStack";
+import { recaptureErrorStack } from "./recaptureErrorStack.js";
 
 export function assertNever(input: never, name: string = "<unknown>"): never {
   throw recaptureErrorStack(

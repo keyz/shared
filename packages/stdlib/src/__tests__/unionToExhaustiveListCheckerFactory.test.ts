@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { unionToExhaustiveListCheckerFactory } from "../public/unionToExhaustiveListCheckerFactory";
+import { unionToExhaustiveListCheckerFactory } from "../public/unionToExhaustiveListCheckerFactory.js";
 
 test("types: unionToExhaustiveListCheckerFactory", () => {
   const checker1 = unionToExhaustiveListCheckerFactory<"a" | "b" | 1>();
