@@ -15,7 +15,7 @@
     "typecheck-all": "tsc --build tsconfig.typecheck.json"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.5",
+    "@changesets/cli": "^2.27.6",
     "@jest/globals": "^29.7.0",
     "@jest/types": "^29.6.3",
     "@keyanz/eslint-config": "workspace:*",
