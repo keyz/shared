@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import type { TAnyLiteralObject } from "../public/types.js";
+import type { TAnyLiteralObject } from "../../types.js";
 
 test("types: typedObjectHasOwn", () => {
   onlyLiteralObject({});

@@ -1,20 +1,20 @@
 import { test } from "vitest";
-import { assertNonNull } from "../public/assertNonNull.js";
+import { refineNonNull } from "../../refineNonNull.js";
 
-test("types: assertNonNull", () => {
+test("types: refineNonNull", () => {
   function onlyString(x: string) {
     return x;
   }
 
   const foo = "ok" as any as string | null;
 
+  const x = foo;
   // @ts-expect-error
-  onlyString(foo);
+  onlyString(x);
   //         ^?
 
-  assertNonNull(foo, "foo");
-
+  const y = refineNonNull(foo, "foo");
   // Good
-  onlyString(foo);
+  onlyString(y);
   //         ^?
 });
