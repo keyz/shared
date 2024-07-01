@@ -45,8 +45,8 @@ importers:
         specifier: ^12.3.3
         version: 12.3.3(typescript@5.5.2)
       tshy:
-        specifier: ^1.16.1
-        version: 1.16.1
+        specifier: ^1.16.2
+        version: 1.16.2
       tsx:
         specifier: ^4.16.0
         version: 4.16.0
@@ -3345,8 +3345,8 @@ packages:
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
-  tshy@1.16.1:
-    resolution: {integrity: sha512-OdPJKvTG/NS8Rtz18z0RzsgLKyceCNx+G+8B8wRjeoPmVbp8x57o3RgY5oq8ybxcebrILDyGXhFyvrDp5e/z0Q==}
+  tshy@1.16.2:
+    resolution: {integrity: sha512-WbjEtXENqbOEIdActBHq1bTJAaSAAD+NDxPdviDrFlvT5FCSWacWlWzSEB7FNLs5qqcP5bng/4W2TuNy1bY6NQ==}
     engines: {node: 16 >=16.17 || 18 >=18.15.0 || >=20.6.1}
     hasBin: true
 
@@ -7465,7 +7465,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tshy@1.16.1:
+  tshy@1.16.2:
     dependencies:
       chalk: 5.3.0
       chokidar: 3.6.0
