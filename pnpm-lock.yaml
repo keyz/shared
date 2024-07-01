@@ -7154,7 +7154,7 @@ snapshots:
 
   resolve-import@1.4.5:
     dependencies:
-      glob: 10.4.1
+      glob: 10.4.2
       walk-up-path: 3.0.1
 
   resolve-pkg-maps@1.0.0: {}
@@ -7395,7 +7395,7 @@ snapshots:
 
   sync-content@1.0.2:
     dependencies:
-      glob: 10.4.1
+      glob: 10.4.2
       mkdirp: 3.0.1
       path-scurry: 1.11.1
       rimraf: 5.0.7
