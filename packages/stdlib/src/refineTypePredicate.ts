@@ -1,4 +1,4 @@
-import { recaptureErrorStack } from "./recaptureErrorStack";
+import { recaptureErrorStack } from "./recaptureErrorStack.js";
 
 export function refineTypePredicate<T>(
   input: unknown,

@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { assertNever } from "../public/assertNever";
+import { assertNever } from "../../assertNever.js";
 
 test("`assertNever` itself doesn't pollute the error stack", () => {
   try {

@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
-import { tryCatch } from "../public/tryCatch";
-import { tryCatchAsync } from "../public/tryCatchAsync";
+import { tryCatch } from "../../tryCatch.js";
+import { tryCatchAsync } from "../../tryCatchAsync.js";
 
 test("happy cases", async () => {
   const output = tryCatch(() => ({ id: 4 }));

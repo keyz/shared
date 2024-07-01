@@ -1,9 +1,9 @@
 import { test } from "vitest";
-import { typedArrayIncludes } from "../public/typedArrayIncludes";
+import { typedObjectHasOwn } from "../../typedObjectHasOwn.js";
 
-test("types: typedArrayIncludes", () => {
-  const staticList = ["aaa", "bbb"] as const;
-  type TStaticKeys = (typeof staticList)[number];
+test("types: typedObjectHasOwn", () => {
+  const staticMap = { aaa: 123, bbb: 123 } as const;
+  type TStaticKeys = keyof typeof staticMap;
 
   function onlyEnum(x: TStaticKeys) {
     return x;
@@ -16,13 +16,13 @@ test("types: typedArrayIncludes", () => {
   onlyEnum(actuallyKey);
   //       ^?
 
-  if (typedArrayIncludes(staticList, actuallyKey)) {
+  if (typedObjectHasOwn(staticMap, actuallyKey)) {
     // Good
     onlyEnum(actuallyKey);
     //       ^?
   }
 
-  if (!typedArrayIncludes(staticList, notKey)) {
+  if (!typedObjectHasOwn(staticMap, notKey)) {
     // @ts-expect-error -- did not pass check
     onlyEnum(notKey);
     //       ^?

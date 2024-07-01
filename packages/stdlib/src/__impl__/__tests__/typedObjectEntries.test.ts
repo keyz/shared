@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { typedObjectEntries } from "../public/typedObjectEntries";
+import { typedObjectEntries } from "../../typedObjectEntries.js";
 
 test("types: typedObjectEntries", () => {
   const staticMap = { aaa: 123, bbb: "hello", ccc: true };

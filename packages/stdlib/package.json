@@ -2,31 +2,345 @@
   "name": "@keyanz/stdlib",
   "version": "0.12.0",
   "license": "MIT",
-  "exports": {
-    "./*": "./dist/public/*.js"
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/public/*"
-      ]
-    }
-  },
+  "type": "module",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "clean": "rimraf ./dist ./.cache",
+    "clean": "rimraf ./dist ./.cache ./.tshy/",
     "lint": "eslint --max-warnings 0 --ext .js,.jsx,.ts,.tsx,.mjs --report-unused-disable-directives --cache --cache-location './.cache/eslint/' .",
+    "prepare": "tshy",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "vitest": "^1.6.0"
   },
+  "tshy": {
+    "project": "./tsconfig.build.json",
+    "exports": "!**/__impl__/**",
+    "exclude": [
+      "**/__tests__/**"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/keyz/shared.git",
     "directory": "packages/stdlib"
+  },
+  "exports": {
+    "./assertCondition": {
+      "import": {
+        "source": "./src/assertCondition.ts",
+        "types": "./dist/esm/assertCondition.d.ts",
+        "default": "./dist/esm/assertCondition.js"
+      },
+      "require": {
+        "source": "./src/assertCondition.ts",
+        "types": "./dist/commonjs/assertCondition.d.ts",
+        "default": "./dist/commonjs/assertCondition.js"
+      }
+    },
+    "./assertNever": {
+      "import": {
+        "source": "./src/assertNever.ts",
+        "types": "./dist/esm/assertNever.d.ts",
+        "default": "./dist/esm/assertNever.js"
+      },
+      "require": {
+        "source": "./src/assertNever.ts",
+        "types": "./dist/commonjs/assertNever.d.ts",
+        "default": "./dist/commonjs/assertNever.js"
+      }
+    },
+    "./assertNonNull": {
+      "import": {
+        "source": "./src/assertNonNull.ts",
+        "types": "./dist/esm/assertNonNull.d.ts",
+        "default": "./dist/esm/assertNonNull.js"
+      },
+      "require": {
+        "source": "./src/assertNonNull.ts",
+        "types": "./dist/commonjs/assertNonNull.d.ts",
+        "default": "./dist/commonjs/assertNonNull.js"
+      }
+    },
+    "./concurrentPool": {
+      "import": {
+        "source": "./src/concurrentPool.ts",
+        "types": "./dist/esm/concurrentPool.d.ts",
+        "default": "./dist/esm/concurrentPool.js"
+      },
+      "require": {
+        "source": "./src/concurrentPool.ts",
+        "types": "./dist/commonjs/concurrentPool.d.ts",
+        "default": "./dist/commonjs/concurrentPool.js"
+      }
+    },
+    "./getNanoTimestamp": {
+      "import": {
+        "source": "./src/getNanoTimestamp.ts",
+        "types": "./dist/esm/getNanoTimestamp.d.ts",
+        "default": "./dist/esm/getNanoTimestamp.js"
+      },
+      "require": {
+        "source": "./src/getNanoTimestamp.ts",
+        "types": "./dist/commonjs/getNanoTimestamp.d.ts",
+        "default": "./dist/commonjs/getNanoTimestamp.js"
+      }
+    },
+    "./isNonNull": {
+      "import": {
+        "source": "./src/isNonNull.ts",
+        "types": "./dist/esm/isNonNull.d.ts",
+        "default": "./dist/esm/isNonNull.js"
+      },
+      "require": {
+        "source": "./src/isNonNull.ts",
+        "types": "./dist/commonjs/isNonNull.d.ts",
+        "default": "./dist/commonjs/isNonNull.js"
+      }
+    },
+    "./mutex": {
+      "import": {
+        "source": "./src/mutex.ts",
+        "types": "./dist/esm/mutex.d.ts",
+        "default": "./dist/esm/mutex.js"
+      },
+      "require": {
+        "source": "./src/mutex.ts",
+        "types": "./dist/commonjs/mutex.d.ts",
+        "default": "./dist/commonjs/mutex.js"
+      }
+    },
+    "./parseUrl": {
+      "import": {
+        "source": "./src/parseUrl.ts",
+        "types": "./dist/esm/parseUrl.d.ts",
+        "default": "./dist/esm/parseUrl.js"
+      },
+      "require": {
+        "source": "./src/parseUrl.ts",
+        "types": "./dist/commonjs/parseUrl.d.ts",
+        "default": "./dist/commonjs/parseUrl.js"
+      }
+    },
+    "./partition": {
+      "import": {
+        "source": "./src/partition.ts",
+        "types": "./dist/esm/partition.d.ts",
+        "default": "./dist/esm/partition.js"
+      },
+      "require": {
+        "source": "./src/partition.ts",
+        "types": "./dist/commonjs/partition.d.ts",
+        "default": "./dist/commonjs/partition.js"
+      }
+    },
+    "./randomElement": {
+      "import": {
+        "source": "./src/randomElement.ts",
+        "types": "./dist/esm/randomElement.d.ts",
+        "default": "./dist/esm/randomElement.js"
+      },
+      "require": {
+        "source": "./src/randomElement.ts",
+        "types": "./dist/commonjs/randomElement.d.ts",
+        "default": "./dist/commonjs/randomElement.js"
+      }
+    },
+    "./recaptureErrorStack": {
+      "import": {
+        "source": "./src/recaptureErrorStack.ts",
+        "types": "./dist/esm/recaptureErrorStack.d.ts",
+        "default": "./dist/esm/recaptureErrorStack.js"
+      },
+      "require": {
+        "source": "./src/recaptureErrorStack.ts",
+        "types": "./dist/commonjs/recaptureErrorStack.d.ts",
+        "default": "./dist/commonjs/recaptureErrorStack.js"
+      }
+    },
+    "./refineNonNull": {
+      "import": {
+        "source": "./src/refineNonNull.ts",
+        "types": "./dist/esm/refineNonNull.d.ts",
+        "default": "./dist/esm/refineNonNull.js"
+      },
+      "require": {
+        "source": "./src/refineNonNull.ts",
+        "types": "./dist/commonjs/refineNonNull.d.ts",
+        "default": "./dist/commonjs/refineNonNull.js"
+      }
+    },
+    "./refineTypePredicate": {
+      "import": {
+        "source": "./src/refineTypePredicate.ts",
+        "types": "./dist/esm/refineTypePredicate.d.ts",
+        "default": "./dist/esm/refineTypePredicate.js"
+      },
+      "require": {
+        "source": "./src/refineTypePredicate.ts",
+        "types": "./dist/commonjs/refineTypePredicate.d.ts",
+        "default": "./dist/commonjs/refineTypePredicate.js"
+      }
+    },
+    "./reindent": {
+      "import": {
+        "source": "./src/reindent.ts",
+        "types": "./dist/esm/reindent.d.ts",
+        "default": "./dist/esm/reindent.js"
+      },
+      "require": {
+        "source": "./src/reindent.ts",
+        "types": "./dist/commonjs/reindent.d.ts",
+        "default": "./dist/commonjs/reindent.js"
+      }
+    },
+    "./shuffle": {
+      "import": {
+        "source": "./src/shuffle.ts",
+        "types": "./dist/esm/shuffle.d.ts",
+        "default": "./dist/esm/shuffle.js"
+      },
+      "require": {
+        "source": "./src/shuffle.ts",
+        "types": "./dist/commonjs/shuffle.d.ts",
+        "default": "./dist/commonjs/shuffle.js"
+      }
+    },
+    "./shuffleObject": {
+      "import": {
+        "source": "./src/shuffleObject.ts",
+        "types": "./dist/esm/shuffleObject.d.ts",
+        "default": "./dist/esm/shuffleObject.js"
+      },
+      "require": {
+        "source": "./src/shuffleObject.ts",
+        "types": "./dist/commonjs/shuffleObject.d.ts",
+        "default": "./dist/commonjs/shuffleObject.js"
+      }
+    },
+    "./sleep": {
+      "import": {
+        "source": "./src/sleep.ts",
+        "types": "./dist/esm/sleep.d.ts",
+        "default": "./dist/esm/sleep.js"
+      },
+      "require": {
+        "source": "./src/sleep.ts",
+        "types": "./dist/commonjs/sleep.d.ts",
+        "default": "./dist/commonjs/sleep.js"
+      }
+    },
+    "./sortObject": {
+      "import": {
+        "source": "./src/sortObject.ts",
+        "types": "./dist/esm/sortObject.d.ts",
+        "default": "./dist/esm/sortObject.js"
+      },
+      "require": {
+        "source": "./src/sortObject.ts",
+        "types": "./dist/commonjs/sortObject.d.ts",
+        "default": "./dist/commonjs/sortObject.js"
+      }
+    },
+    "./tryCatch": {
+      "import": {
+        "source": "./src/tryCatch.ts",
+        "types": "./dist/esm/tryCatch.d.ts",
+        "default": "./dist/esm/tryCatch.js"
+      },
+      "require": {
+        "source": "./src/tryCatch.ts",
+        "types": "./dist/commonjs/tryCatch.d.ts",
+        "default": "./dist/commonjs/tryCatch.js"
+      }
+    },
+    "./tryCatchAsync": {
+      "import": {
+        "source": "./src/tryCatchAsync.ts",
+        "types": "./dist/esm/tryCatchAsync.d.ts",
+        "default": "./dist/esm/tryCatchAsync.js"
+      },
+      "require": {
+        "source": "./src/tryCatchAsync.ts",
+        "types": "./dist/commonjs/tryCatchAsync.d.ts",
+        "default": "./dist/commonjs/tryCatchAsync.js"
+      }
+    },
+    "./typedArrayIncludes": {
+      "import": {
+        "source": "./src/typedArrayIncludes.ts",
+        "types": "./dist/esm/typedArrayIncludes.d.ts",
+        "default": "./dist/esm/typedArrayIncludes.js"
+      },
+      "require": {
+        "source": "./src/typedArrayIncludes.ts",
+        "types": "./dist/commonjs/typedArrayIncludes.d.ts",
+        "default": "./dist/commonjs/typedArrayIncludes.js"
+      }
+    },
+    "./typedObjectEntries": {
+      "import": {
+        "source": "./src/typedObjectEntries.ts",
+        "types": "./dist/esm/typedObjectEntries.d.ts",
+        "default": "./dist/esm/typedObjectEntries.js"
+      },
+      "require": {
+        "source": "./src/typedObjectEntries.ts",
+        "types": "./dist/commonjs/typedObjectEntries.d.ts",
+        "default": "./dist/commonjs/typedObjectEntries.js"
+      }
+    },
+    "./typedObjectHasOwn": {
+      "import": {
+        "source": "./src/typedObjectHasOwn.ts",
+        "types": "./dist/esm/typedObjectHasOwn.d.ts",
+        "default": "./dist/esm/typedObjectHasOwn.js"
+      },
+      "require": {
+        "source": "./src/typedObjectHasOwn.ts",
+        "types": "./dist/commonjs/typedObjectHasOwn.d.ts",
+        "default": "./dist/commonjs/typedObjectHasOwn.js"
+      }
+    },
+    "./typedObjectKeys": {
+      "import": {
+        "source": "./src/typedObjectKeys.ts",
+        "types": "./dist/esm/typedObjectKeys.d.ts",
+        "default": "./dist/esm/typedObjectKeys.js"
+      },
+      "require": {
+        "source": "./src/typedObjectKeys.ts",
+        "types": "./dist/commonjs/typedObjectKeys.d.ts",
+        "default": "./dist/commonjs/typedObjectKeys.js"
+      }
+    },
+    "./types": {
+      "import": {
+        "source": "./src/types.ts",
+        "types": "./dist/esm/types.d.ts",
+        "default": "./dist/esm/types.js"
+      },
+      "require": {
+        "source": "./src/types.ts",
+        "types": "./dist/commonjs/types.d.ts",
+        "default": "./dist/commonjs/types.js"
+      }
+    },
+    "./unionToExhaustiveListCheckerFactory": {
+      "import": {
+        "source": "./src/unionToExhaustiveListCheckerFactory.ts",
+        "types": "./dist/esm/unionToExhaustiveListCheckerFactory.d.ts",
+        "default": "./dist/esm/unionToExhaustiveListCheckerFactory.js"
+      },
+      "require": {
+        "source": "./src/unionToExhaustiveListCheckerFactory.ts",
+        "types": "./dist/commonjs/unionToExhaustiveListCheckerFactory.d.ts",
+        "default": "./dist/commonjs/unionToExhaustiveListCheckerFactory.js"
+      }
+    },
+    "./package.json": "./package.json"
   }
 }

@@ -1,5 +1,5 @@
 import { test } from "vitest";
-import { partition } from "../public/partition";
+import { partition } from "../../partition.js";
 
 test("types: partition", () => {
   function onlyNumber(x: number) {

@@ -1,18 +1,18 @@
 import { test } from "vitest";
-import { assertNonNull } from "../public/assertNonNull";
+import { assertCondition } from "../../assertCondition.js";
 
-test("types: assertNonNull", () => {
+test("types: assertCondition", () => {
   function onlyString(x: string) {
     return x;
   }
 
-  const foo = "ok" as any as string | null;
+  let foo = "ok" as any as number | string;
 
   // @ts-expect-error
   onlyString(foo);
   //         ^?
 
-  assertNonNull(foo, "foo");
+  assertCondition(typeof foo === "string", "foo");
 
   // Good
   onlyString(foo);

@@ -1,5 +1,5 @@
-import { typedObjectKeys } from "./typedObjectKeys";
-import type { TAnyLiteralObject } from "./types";
+import { typedObjectKeys } from "./typedObjectKeys.js";
+import type { TAnyLiteralObject } from "./types.js";
 
 export function sortObject<const T extends TAnyLiteralObject>(
   input: T,
