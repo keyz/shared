@@ -28,7 +28,7 @@
     "rimraf": "^5.0.9",
     "syncpack": "^12.3.3",
     "tsx": "^4.16.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": "^18.0.0",
