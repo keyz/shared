@@ -22,7 +22,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.5"
   },
   "repository": {
     "type": "git",
