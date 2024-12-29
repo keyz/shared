@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 async function asyncFoo() {}
 
 export function test() {
