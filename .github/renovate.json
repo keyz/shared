@@ -24,7 +24,7 @@
     {
       "description": "monorepo:@keyanz",
       "groupName": "@keyanz monorepo",
-      "matchPackagePrefixes": ["@keyanz/"]
+      "matchPackageNames": ["@keyanz/**"]
     }
   ],
   "postUpdateOptions": ["pnpmDedupe"],
