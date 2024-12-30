@@ -12,14 +12,19 @@ export function useMediaQuery(query: string): boolean | undefined {
       const media = window.matchMedia(query);
       resultRef.current = media.matches; // update immediately
 
-      const listener = (event: MediaQueryListEvent) => {
-        resultRef.current = event.matches;
-        onStoreChange();
-      };
+      const abortController = new AbortController();
 
-      media.addEventListener("change", listener);
+      media.addEventListener(
+        "change",
+        (event) => {
+          resultRef.current = event.matches;
+          onStoreChange();
+        },
+        { signal: abortController.signal },
+      );
+
       return () => {
-        media.removeEventListener("change", listener);
+        abortController.abort();
       };
     },
     [query],
