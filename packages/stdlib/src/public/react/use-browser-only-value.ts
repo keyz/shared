@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { useSyncExternalStore } from "react";
 
 const noop = () => undefined;
