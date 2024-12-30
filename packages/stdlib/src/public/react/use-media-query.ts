@@ -2,7 +2,7 @@
 import { useCallback, useRef, useSyncExternalStore } from "react";
 import { refineNonNull } from "../refineNonNull";
 
-const noop = () => undefined;
+const returnsUndefined = () => undefined;
 
 export function useMediaQuery(query: string): boolean | undefined {
   const resultRef = useRef<boolean | null>(null);
@@ -26,6 +26,6 @@ export function useMediaQuery(query: string): boolean | undefined {
   return useSyncExternalStore<boolean | undefined>(
     subscribe,
     () => refineNonNull(resultRef.current, "resultRef.current"),
-    noop, // server
+    returnsUndefined, // server
   );
 }

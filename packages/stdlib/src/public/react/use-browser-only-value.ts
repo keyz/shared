@@ -1,13 +1,13 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useSyncExternalStore } from "react";
 
-const noop = () => undefined;
-const emptySubscribe = () => noop;
+const returnsUndefined = () => undefined;
+const noopSubscribe = () => returnsUndefined;
 
 export function useBrowserOnlyValue<T>(browserThunk: () => T): T | undefined {
   return useSyncExternalStore<T | undefined>(
-    emptySubscribe,
+    noopSubscribe,
     browserThunk, // client
-    noop, // server
+    returnsUndefined, // server
   );
 }
