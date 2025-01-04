@@ -1,24 +1,26 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useCallback, useRef, useSyncExternalStore } from "react";
-import { refineNonNull } from "../refineNonNull";
 
 const returnsUndefined = () => undefined;
 
 export function useMediaQuery(query: string): boolean | undefined {
-  const resultRef = useRef<boolean | null>(null);
+  const cacheRef = useRef<{ query: string; result: boolean } | null>(null);
 
   const subscribe = useCallback(
     (onStoreChange: () => void) => {
       const media = window.matchMedia(query);
-      resultRef.current = media.matches; // update immediately
 
       const abortController = new AbortController();
 
       media.addEventListener(
         "change",
         (event) => {
-          resultRef.current = event.matches;
-          onStoreChange();
+          const isDirty = cacheRef.current?.result !== event.matches;
+          cacheRef.current = { query, result: event.matches };
+
+          if (isDirty) {
+            onStoreChange();
+          }
         },
         { signal: abortController.signal },
       );
@@ -32,7 +34,15 @@ export function useMediaQuery(query: string): boolean | undefined {
 
   return useSyncExternalStore<boolean | undefined>(
     subscribe,
-    () => refineNonNull(resultRef.current, "resultRef.current"),
+    (): boolean => {
+      // client
+      if (cacheRef.current?.query !== query) {
+        const media = window.matchMedia(query);
+        cacheRef.current = { query, result: media.matches };
+      }
+
+      return cacheRef.current.result;
+    },
     returnsUndefined, // server
   );
 }
